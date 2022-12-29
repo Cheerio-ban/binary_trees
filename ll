@@ -8,14 +8,19 @@
  * 1. if leaf, return 1
  * 2. if not leaf or NULL, return 0
  */
-
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
-	if (!node)
+	/* if given node is NULL */
+	if (node == NULL)
+	{
 		return (0);
+	}
 
-	if (!node->left && !node->right)
+	/* if given node doesn't have two children */
+	if ((node->left == NULL) && (node->right == NULL))
+	{
 		return (1);
+	}
 
 	return (0);
 }
