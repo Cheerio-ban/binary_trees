@@ -9,13 +9,10 @@
  */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
-	/* base case */
 	if ((tree == NULL) || (func == NULL))
 	{
 		;
 	}
-
-	/* recursively traverse on the left subtree and then the right */
 	else
 	{
 		func(tree->n);
